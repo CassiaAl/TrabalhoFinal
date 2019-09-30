@@ -1,0 +1,35 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Agenda Eletrônica - Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <form onsubmit="processForm(event)">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        
+      <ion-item>
+        <ion-label position="stacked">Login <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+        <p>{{result}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Senha<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+      </ion-item>
+
+           
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button (click)="consultarUsuario" type="submit" >Entrar</ion-button>
+    </div>
+  
+  </form>
+</ion-content>
